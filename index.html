@@ -201,6 +201,17 @@ img {
     }
 }
 
+.section {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 1s ease;
+}
+
+.section.mostrar {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 </style>
 </head>
 
@@ -304,6 +315,25 @@ class="whatsapp-btn"
 target="_blank">
 💬
 </a>
+
+<script>
+    const secoes = document.querySelectorAll('.section');
+
+    function mostrarSecoes() {
+        const alturaTela = window.innerHeight;
+
+        secoes.forEach(secao => {
+            const topoSecao = secao.getBoundingClientRect().top;
+
+            if (topoSecao < alturaTela - 100) {
+                secao.classList.add('mostrar');
+            }
+        });
+    }
+
+    window.addEventListener('scroll', mostrarSecoes);
+    window.addEventListener('load', mostrarSecoes);
+</script>
 
 </body>
 </html>
