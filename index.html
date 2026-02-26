@@ -319,20 +319,19 @@ target="_blank">
 <script>
     const secoes = document.querySelectorAll('.section');
 
-    function mostrarSecoes() {
-        const alturaTela = window.innerHeight;
-
-        secoes.forEach(secao => {
-            const topoSecao = secao.getBoundingClientRect().top;
-
-            if (topoSecao < alturaTela - 100) {
-                secao.classList.add('mostrar');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('mostrar');
             }
         });
-    }
+    }, {
+        threshold: 0.2
+    });
 
-    window.addEventListener('scroll', mostrarSecoes);
-    window.addEventListener('load', mostrarSecoes);
+    secoes.forEach(secao => {
+        observer.observe(secao);
+    });
 </script>
 
 </body>
