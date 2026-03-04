@@ -22,19 +22,23 @@ nav {
     background: rgba(255, 255, 255, 0.9);
     padding: 15px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    text-align: center;
+
 
     position: fixed;
     width: 100%;
     top: 0;
     left: 0;
+
     backdrop-filter: blur(10px);
     transition: 0.3s;
     z-index: 1000;
+
+    display: flex;
+    justify-content: center;
+    gap:20px;
 }
 
 nav a {
-    margin: 0 15px;
     text-decoration: none;
     color: #e91e63;
     font-weight: bold;
@@ -200,15 +204,15 @@ footer {
 
     .galeria img {
         width: 100%;
+        max-width: 300px;
         height: auto;
     }
 
     nav {
         display: flex;
         justify-content: center;
-        gap: 20px;
+        gap: 15px;
         flex-wrap: wrap;
-        margin: 12px 0;
         font-size: 18px;
     }
 }
@@ -280,6 +284,10 @@ nav.scrolled {
     transform: scale(1.15);
 }
 
+.galeria {
+    width:100%;
+}
+
 </style>
 </head>
 
@@ -321,7 +329,7 @@ nav.scrolled {
 
     <div class="card">
         <h3>Botox Capilar</h3>
-        <P>A partir de R$ 80</P>
+        <p>A partir de R$ 80</p>
     </div>
 
     <div class="card">
