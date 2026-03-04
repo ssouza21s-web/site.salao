@@ -68,6 +68,8 @@ h1, h2 {
      opacity: 0;
     transform: translateY(50px);
     transition: all 1s ease;
+
+    scroll-margin-top: 90px;
 }
 
 .botao {
@@ -159,26 +161,55 @@ footer {
 }
 
 @media (max-width: 768px) {
+
+    body {
+        padding-top: 80px;
+    }
+
     .topo {
-        height: 250px;
+        height: 220px;
     }
 
     .logo {
-        width: 250px;
+        width: 220px;
+    }
+
+    h2 {
+        font-size: 26px;
+    }
+
+    .section {
+        padding: 40px 15px;
     }
 
     .servicos-container {
         flex-direction: column;
         align-items: center;
+        gap: 20px;
     }
 
     .card {
-        width: 90%;
+        width: 95%;
+        padding: 30px;
+        font-size: 18px;
     }
 
-    nav a {
-        display: block;
-        margin: 10px 0;
+    .card h3 {
+        font-size: 20px;
+    }
+
+    .galeria img {
+        width: 100%;
+        height: auto;
+    }
+
+    nav {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+        margin: 12px 0;
+        font-size: 18px;
     }
 }
 
@@ -255,9 +286,9 @@ nav.scrolled {
 <body>
 
 <nav>
-<a href="#">Serviços</a>
-<a href="#">Fotos</a>
-<a href="#">Contato</a>
+<a href="#servicos">Serviços</a>
+<a href="#fotos">Fotos</a>
+<a href="#contato">Contato</a>
 </nav>
 
 <header class="topo">
@@ -268,7 +299,7 @@ nav.scrolled {
 </header>
 
 
-<div class="section">
+<div id="servicos" class="section">
 <h2>Serviços</h2>
 
 <div class="servicos-container">
@@ -334,7 +365,7 @@ nav.scrolled {
 
 </div>
 
-<div class="section">
+<div id="fotos" class="section">
 <h2>Galeria de trabalhos</h2>
 
 <div class="galeria">
@@ -353,7 +384,7 @@ nav.scrolled {
 </div>
 </div>
 
-<footer>
+<footer id="contato">
 <p>Rio de Janeiro</p>
 <p>Telefone: (21) 969545421</p>
 </footer>
