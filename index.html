@@ -183,29 +183,35 @@ footer {
     }
 
     .section {
-        padding: 40px 15px;
+        padding: 30px 12px;
     }
 
     .servicos-container {
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
     }
 
     .card {
-        width: 95%;
-        padding: 30px;
-        font-size: 18px;
+        width: 100%;
+        padding: 20px;
+        font-size: 16px;
     }
 
     .card h3 {
         font-size: 20px;
     }
 
+    .galeria {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
     .galeria img {
         width: 100%;
-        max-width: 300px;
-        height: auto;
+        height: 180px;
+        object-fit: cover;
     }
 
     nav {
@@ -213,7 +219,7 @@ footer {
         justify-content: center;
         gap: 15px;
         flex-wrap: wrap;
-        font-size: 18px;
+        font-size: 16px;
     }
 }
 
@@ -393,15 +399,20 @@ nav.scrolled {
 </div>
 
 <footer id="contato">
-<p>Rio de Janeiro</p>
-<p>Telefone: (21) 969545421</p>
+<p>
+📍
+<a href="https://maps.google.com/?q=R. Nova Cap, 35 - Manguinhos, Rio de Janeiro"
+target="_blank">
+R. Nova Cap, 35 - Manguinhos - Benfica, Rio de Janeiro
+</a>
+</p>
 </footer>
 
 <a href="https://wa.me/5521969545421"
 class="whatsapp-btn"
 target="_blank"
 rel="noopener">
-💬
+WhatsApp
 </a>
 
 <script>
