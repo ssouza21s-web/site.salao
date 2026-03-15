@@ -171,11 +171,12 @@ footer {
     }
 
     .topo {
-        height: 220px;
+        height: auto;
+        padding: 40px 10px;
     }
 
     .logo {
-        width: 220px;
+        width: 260px;
     }
 
     h2 {
@@ -188,13 +189,13 @@ footer {
 
     .servicos-container {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
         gap: 15px;
     }
 
     .card {
         width: 100%;
-        padding: 20px;
+        padding: 18px;
         font-size: 16px;
     }
 
@@ -294,6 +295,14 @@ nav.scrolled {
 
 .galeria {
     width:100%;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
 }
 
 </style>
