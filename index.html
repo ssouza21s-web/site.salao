@@ -10,17 +10,26 @@
 
 <meta name="description" content="Salão de beleza no Rio de Janeiro especializado em mechas, corte femenino, escova, hidratação, progressiva, botox capilar e design de sobrancelhas. Agende seu horário pelo WhatsApp.">
 
+<meta name="author" content="Raquel Sales">
+<meta name="robots" content="index, fallow">
+
+<meta property="og:title" content="Raquel Sales | Salão de Beleza">
+<meta property="og:descripton" content="Especialista em cabelos, progressiva, hidratação e beleza feminina no Rio de Janeiro.">
+<meta property="og:type" content="website">
+
 <style>
 
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
     padding-top: 70px;
+    background-color: #000;
+    color: #fff;
     overflow-x: hidden;
 }
 
 nav {
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.08);
     padding: 15px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 
@@ -30,18 +39,20 @@ nav {
     top: 0;
     left: 0;
 
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(15px);
     transition: 0.3s;
     z-index: 1000;
 
     display: flex;
     justify-content: center;
     gap:20px;
+
+    border-bottom: 1px solid rgba(255,255,255,0.1);
 }
 
 nav a {
     text-decoration: none;
-    color: #e91e63;
+    color: #d4af37;
     font-weight: bold;
 }
 
@@ -58,9 +69,11 @@ nav a:hover {
 }
 
 .logo {
-    width: 380px;
-    max-width: 90%;
+    width: 480px;
+    max-width: 95%;
     height: auto;
+    filter: drop-shadow(0 0 25px rgba(212,175,55,0.4));
+    animation: floatLogo 4s ease-in-out infinite;
 }
 
 h1, h2 {
@@ -141,13 +154,14 @@ footer {
 }
 
 .card {
-    background: linear-gradient(145deg, #ffffff, #f3f3f3);
+    background: linear-gradient(145deg, #111, #1b1b1b);
+    color: white;
     width: 250px;
-    padding: 25px;
-    border-radius: 15px;
+    padding: 30px;
+    border-radius: 18px;
     box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-    transition: 0.3s;
-    border: 1px solid rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(212,175,55,0.15);
 }
 
 .card h3 {
@@ -157,13 +171,14 @@ footer {
 }
 
 .card p {
-    color: #555;
+    color: #ccc;
     font-weight: 500;
 }
 
 .card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(212,175,55,0.2);
+    border: 1px solid rgba(212,175,55,0.4)
 }
 
 @media (max-width: 768px) {
@@ -182,7 +197,9 @@ footer {
     }
 
     h2 {
-        font-size: 26px;
+        font-size: clamp(26px, 4vw, 36px);
+        letter-spacing: 1px;
+        margin-bottom: 40px;
     }
 
     .section {
@@ -199,6 +216,9 @@ footer {
         width: 100%;
         padding: 18px;
         font-size: 16px;
+
+        position: relative;
+        overflow: hidden;
     }
 
     .card h3 {
@@ -233,7 +253,7 @@ footer {
     background-color: #25D366;
     padding: 15px;
     border-radius: 50%;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    box-shadow: 0 0 20px rgba(37,211,102,0.6);
     transition: 0.3s;
 }
 
@@ -250,7 +270,7 @@ html {
   scroll-behavior: smooth;
 }
 
-img {
+.section img {
     opacity: 0;
     transform: translateY(40px);
     animation: aparecer 2s ease forwards;
@@ -273,7 +293,7 @@ nav.scrolled {
 }
 
 .section:nth-child(even) {
-    background: #f9f9f9;
+    background: #0f0f0f;
 }
 
 .redes-sociais {
@@ -299,6 +319,46 @@ nav.scrolled {
     box-sizing: border-box;
 }
 
+.hero {
+    background: radial-gradient(circle at center, #111 0%, #000 70%);
+    padding: 120px 20px;
+    text-align: center;
+}
+
+@keyframes floatLogo {
+    0% { transform: translateY(0px);}
+    50% { transform: translateY(-8px);}
+    100% { transform: translateY(0px);}
+}
+
+.subtitulo {
+    color: #ccc;
+    margin-top: 10px;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 18px;
+    opacity:0;
+    transition: 0.3s;
+    background: radial-gradient(circle at top,
+        rgba(212,175,55,0.25),
+          transparent 70%);
+}
+
+.card:hover::before {
+    opacity: 1;
+}
+
+::selection {
+    background: #d4af37;
+    color: black;
+}
+
 </style>
 </head>
 
@@ -310,13 +370,16 @@ nav.scrolled {
 <a href="#contato">Contato</a>
 </nav>
 
-<header class="topo">
+<header class="hero">
     <h1 style="display:none;">
     Raquel Sales - Salão de Beleza no Rio de Janeiro
     </h1>
-    <img src="logo.png" class="logo">
+    <img src="logo1.png" class="logo">
 </header>
 
+<p class="subtitulo">
+    Especialista em beleza feminina • Realce sua autoestima
+</p>
 
 <div id="servicos" class="section">
 <h2>Serviços</h2>
@@ -326,41 +389,89 @@ nav.scrolled {
     <div class="card">
         <h3>Corte Feminino</h3>
         <p>A partir de R$ 40</p>
+
+        <a href="https://wa.me/5521969545421"
+        class="botao"
+        target="_blank">
+        Agendar
+      </a>
     </div>
 
     <div class="card">
         <h3>Escova e Prancha</h3>
         <p>A partir de R$ 50</p>
+
+         <a href="https://wa.me/5521969545421"
+        class="botao"
+        target="_blank">
+        Agendar
+      </a>
     </div>
 
     <div class="card">
         <h3>Hidratação + Escova e Prancha</h3>
         <p>A partir de R$ 70</p>
+
+         <a href="https://wa.me/5521969545421"
+        class="botao"
+        target="_blank">
+        Agendar
+      </a>
     </div>
 
     <div class="card">
         <h3>Botox Capilar</h3>
         <p>A partir de R$ 80</p>
+
+         <a href="https://wa.me/5521969545421"
+        class="botao"
+        target="_blank">
+        Agendar
+      </a>
     </div>
 
     <div class="card">
         <h3>Progressiva</h3>
         <p>A partir de R$ 150</p>
+
+         <a href="https://wa.me/5521969545421"
+        class="botao"
+        target="_blank">
+        Agendar
+      </a>
     </div>
 
     <div class="card">
         <h3>Coloração</h3>
         <p>A partir de R$ 30</p>
+
+         <a href="https://wa.me/5521969545421"
+        class="botao"
+        target="_blank">
+        Agendar
+      </a>
     </div>
 
     <div class="card">
         <h3>Sobrancelha Simples</h3>
         <p>R$ 15</p>
+
+         <a href="https://wa.me/5521969545421"
+        class="botao"
+        target="_blank">
+        Agendar
+      </a>
     </div>
 
     <div class="card">
         <h3>Sobrancelha com rena</h3>
         <p>R$ 20</p>
+
+         <a href="https://wa.me/5521969545421"
+        class="botao"
+        target="_blank">
+        Agendar
+      </a>
     </div>
 
 </div>
