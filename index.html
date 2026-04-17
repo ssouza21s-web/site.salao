@@ -359,6 +359,116 @@ nav.scrolled {
     color: black;
 }
 
+.footer {
+    background: #000;
+    padding: 50px 20px 20px;
+    color: #fff;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 60px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.footer-col {
+    flex: 1;
+    min-width: 200px;
+
+}
+
+.footer-logo {
+    width: 200px;
+    margin-bottom: 20px;
+}
+
+.footer-col h3 {
+    color: #d4af37;
+    font-size: 14px;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.footer-col p {
+    color: #dcdcdc;
+    margin: 6px 0;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+    color: #d4af37;
+    margin-right: 8px;
+}
+
+.icons img {
+    width:28px;
+    height: 28px;
+    transition: 0.3s;
+    filter: brightness(0.9)
+}
+
+.icons img:hover {
+    transform: scale(1.2);
+    filter: brightness(1.5) sepia(1) hue-rotate(10deg);
+}
+
+.icon-wpp {
+    width: 18px;
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
+.linha {
+    height: 1px;
+    background: rgba(255,255,255,0.2);
+    margin: 40px auto 20px;
+    max-width: 1100px;
+}
+
+.direitos {
+    text-align: center;
+    font-size: 13px;
+    color: #cfcfcf;
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+}
+
+.footer-col:nth-child(1) {
+    text-align: left;
+}
+
+.footer-col:nth-child(2) {
+    text-align: center;
+}
+
+.footer-col:nth-child(3) {
+    text-align: right;
+}
+
+.footer a {
+    color: #d4af37;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
 </style>
 </head>
 
@@ -514,14 +624,58 @@ nav.scrolled {
 </div>
 </div>
 
-<footer id="contato">
-<p>
-📍
-<a href="https://maps.google.com/?q=R. Nova Cap, 35 - Manguinhos, Rio de Janeiro"
-target="_blank">
-R. Nova Cap, 35 - Manguinhos - Benfica, Rio de Janeiro
-</a>
-</p>
+<footer class="footer" id="contato">
+
+    <div class="footer-container">
+
+        <div class="footer-col">
+            <img src="logo1.png" class="footer-logo">
+
+            <div class="icons">
+                <a href="https://instagram.com/raquelsales.cabeleleira" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png">
+            </a>
+        
+            <a href="https://WWW.facebook.com/share/1PcSpenP3z/" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png">
+            </a>
+        </div>
+    </div>
+    
+        <div class="footer-col">
+            <h3>Contato</h3>
+            <p>
+                <span class="icons">✉</span> atendimento@raquelsales.com
+            </p>
+
+            <p>
+                <spam class="icons">☎</spam> (21) 96954-5421
+            </p>
+
+            <p>
+                <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" class="icon-wpp">
+                WhatsApp disponível
+            </p>
+        </div>
+
+        <div class="footer-col">
+            <h3>Endereço</h3>
+            <p>
+                📍
+                <a href="https://maps.google.com/?q=R. Nova Cap, 35 - Manguinhos, Rio de Janeiro" target="_blank">
+                    R. Nova Cap, 35 - Manguinhos - Benfica, RJ
+                </a>
+            </p>
+        </div>
+
+    </div>
+
+    <div class="linha"></div>
+
+    <p class="direitos">
+       © 2026 - Raquel Sales Salão de Beleza. Todos os direitos reservados.
+    </p>
+
 </footer>
 
 <a href="https://wa.me/5521969545421"
